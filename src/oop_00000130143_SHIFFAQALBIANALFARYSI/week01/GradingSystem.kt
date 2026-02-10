@@ -1,4 +1,4 @@
-package oop_00000130143_SHIFFAQALBIANALFARYSI.week01.week01
+package oop_00000130143_SHIFFAQALBIANALFARYSI.week01
 
 fun main(){
     var name = "John Thor"
