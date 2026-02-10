@@ -1,17 +1,20 @@
 package oop_00000130143_SHIFFAQALBIANALFARYSI.week02
 
-class Student (val name: String, val nim: String, var gpa: Double = 0.0, var major: String) {
+class Student(
+    val name: String,
+    val nim: String,
+    val major: String,
+    val gpa: Double = 0.0
+) {
+
     init {
         if (nim.length != 5) {
-            println("WARNING: Objek tercipta dengan NIM ($nim) yang tudak valid!")
-            println("Data mahasiswa $name mungkin akan bermasalah di sistem.")
-        } else {
-            println("LOG: objek student $name berhasil dialokasikan di memory.")
+            println("WARNING: NIM tidak valid!")
         }
     }
-    constructor(name: String, nim: String)
-            : this(name, nim, major ="Non-Matriculated") {
 
-        println("LOG: Menggunakan constructor jalur umum (Tanpa Jurusan).")
+    constructor(name: String, nim: String)
+            : this(name, nim, "Non-Matriculated") {
+        println("LOG: Menggunakan constructor jalur umum.")
     }
 }
