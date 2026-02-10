@@ -1,6 +1,6 @@
 package oop_00000130143_SHIFFAQALBIANALFARYSI.week02
 
-class Student (val name: String, val nim: String, var major: String,) {
+class Student (val name: String, val nim: String, var gpa: Double = 0.0, var major: String) {
     init {
         if (nim.length != 5) {
             println("WARNING: Objek tercipta dengan NIM ($nim) yang tudak valid!")
@@ -10,7 +10,7 @@ class Student (val name: String, val nim: String, var major: String,) {
         }
     }
     constructor(name: String, nim: String)
-            : this(name, nim, "Non-Matriculated") {
+            : this(name, nim, major ="Non-Matriculated") {
 
         println("LOG: Menggunakan constructor jalur umum (Tanpa Jurusan).")
     }
