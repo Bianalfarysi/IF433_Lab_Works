@@ -1,7 +1,5 @@
 package oop_00000130143_SHIFFAQALBIANALFARYSI.week03
 
-package oop_<nim>_<nama>.week03
-
 class Weapon(val name: String, damageInput: Int) {
 
     var damage: Int = damageInput

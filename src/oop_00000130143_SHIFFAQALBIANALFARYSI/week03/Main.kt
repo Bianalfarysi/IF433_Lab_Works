@@ -2,14 +2,11 @@ package oop_00000130143_SHIFFAQALBIANALFARYSI.week03
 
 fun main() {
 
-    val e = Employee("Budi")
+    val sword = Weapon("Excalibur", 100)
 
-    e.salary = 5000
-    println("Salary: ${e.salary}")
+    sword.damage = -50
+    sword.damage = 9999
 
-    println("Bonus: ${e.bonus}")
-
-    e.salary = -100
-
-    e.setPerformanceRating(4)
+    println("Damage: ${sword.damage}")
+    println("Tier: ${sword.tier}")
 }
