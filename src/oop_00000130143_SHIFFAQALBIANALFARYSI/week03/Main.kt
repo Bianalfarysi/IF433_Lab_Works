@@ -1,10 +1,6 @@
 package oop_00000130143_SHIFFAQALBIANALFARYSI.week03
 
 fun main() {
-    val e = Employee("Bian")
-
-    e.salary = -1000
+    val e = Employee("Budi")
     e.salary = 5000
-
-    println("Salary sekarang: ${e.salary}")
 }
