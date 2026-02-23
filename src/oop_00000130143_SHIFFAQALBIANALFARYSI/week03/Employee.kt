@@ -10,4 +10,19 @@ class Employee(val name: String) {
                 field = value
             }
         }
+
+    private var performanceRating: Int = 0
+
+    fun setPerformanceRating(newRating: Int) {
+        if (newRating in 1..5) {
+            performanceRating = newRating
+            println("Performance rating berhasil diupdate menjadi $performanceRating")
+        } else {
+            println("Rating harus antara 1 sampai 5")
+        }
+    }
+
+    fun getPerformanceRating(): Int {
+        return performanceRating
+    }
 }
