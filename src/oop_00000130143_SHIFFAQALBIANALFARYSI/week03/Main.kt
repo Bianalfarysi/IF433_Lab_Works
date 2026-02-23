@@ -4,9 +4,10 @@ fun main() {
 
     val sword = Weapon("Excalibur", 100)
 
-    sword.damage = -50
-    sword.damage = 9999
+    val player = Player("Bian")
 
-    println("Damage: ${sword.damage}")
-    println("Tier: ${sword.tier}")
+    player.addXp(50)
+    player.addXp(60)
+
+    println("Level sekarang: ${player.level}")
 }
