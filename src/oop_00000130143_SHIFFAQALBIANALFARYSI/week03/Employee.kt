@@ -16,8 +16,6 @@ class Employee(val name: String) {
     fun setPerformanceRating(newRating: Int) {
         if (newRating in 1..5) {
             performanceRating = newRating
-        } else {
-            println("Rating harus antara 1 sampai 5")
         }
     }
 
