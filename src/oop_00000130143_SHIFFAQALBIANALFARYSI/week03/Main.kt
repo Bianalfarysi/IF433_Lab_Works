@@ -7,7 +7,9 @@ fun main() {
     e.salary = 5000
     println("Salary: ${e.salary}")
 
-    e.setPerformanceRating(4)
+    println("Bonus: ${e.bonus}")
 
-    println("Performance Rating: ${e.getPerformanceRating()}")
+    e.salary = -100
+
+    e.setPerformanceRating(4)
 }
