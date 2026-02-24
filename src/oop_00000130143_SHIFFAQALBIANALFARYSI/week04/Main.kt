@@ -6,9 +6,9 @@ fun main() {
     generalVehicle.honk()
     generalVehicle.accelerate()
 
-    println("\n--- Testing Car ---")
-    val myCar = Car(brand = "Toyota", numberOfDoors = 4)
-    myCar.openTrunk()
-    myCar.honk()
-    myCar.accelerate()
+    println("\n--- Testing ElectricCar ---")
+    val myEv = ElectricCar(brand = "Tesla", numberOfDoors = 4, batteryCapacity = 85)
+    myEv.accelerate()
+    myEv.honk()
+    myEv.openTrunk()
 }
