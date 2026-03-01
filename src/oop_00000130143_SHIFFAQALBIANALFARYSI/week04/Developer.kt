@@ -1,15 +1,12 @@
 package oop_00000130143_SHIFFAQALBIANALFARYSI.week04
 
-open class Employee(
-    val name: String,
-    val baseSalary: Int
-) {
+class Developer(
+    name: String,
+    baseSalary: Int,
+    val programmingLanguage: String
+) : Employee(name, baseSalary) {
 
-    open fun work() {
-        println("$name sedang bekerja.")
-    }
-
-    open fun calculateBonus(): Int {
-        return (baseSalary * 10) / 100
+    override fun work() {
+        println("$name sedang ngoding menggunakan $programmingLanguage.")
     }
 }
