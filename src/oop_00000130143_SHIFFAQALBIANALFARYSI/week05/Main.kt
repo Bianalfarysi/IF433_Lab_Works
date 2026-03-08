@@ -60,6 +60,6 @@ fun main() {
             payment.processPayment(75000.0)
         }
 
-        println("-------------------------")
+        println("-----------Terimakasih--------------")
     }
 }
