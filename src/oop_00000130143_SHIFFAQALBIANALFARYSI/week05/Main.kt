@@ -1,6 +1,6 @@
 package oop_00000130143_SHIFFAQALBIANALFARYSI.week05
 
-fun main() {
+/*fun main() {
     val dosen1 = Dosen(nama = "Pak Alex", nidn = "0123456")
     val admin = Admin(nama = "Bu Siti")
 
@@ -22,4 +22,18 @@ fun main() {
         }
         println("-----------------------")
     }
+}*/
+
+fun main() {
+    println("=== MATH HELPER - METHOD OVERLOADING ===")
+    val math = MathHelper()
+
+    val luasPersegi = math.hitungLuas(5)
+    println("Luas Persegi (sisi = 5)           : $luasPersegi")
+
+    val luasPersegiPanjang = math.hitungLuas(4, 6)
+    println("Luas Persegi Panjang (p=4, l=6)   : $luasPersegiPanjang")
+
+    val luasLingkaran = math.hitungLuas(7.0)
+    println("Luas Lingkaran (r = 7.0)          : $luasLingkaran")
 }
