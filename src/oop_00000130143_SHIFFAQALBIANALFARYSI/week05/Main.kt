@@ -24,7 +24,7 @@ package oop_00000130143_SHIFFAQALBIANALFARYSI.week05
     }
 }*/
 
-fun main() {
+/*fun main() {
 
     println("=== MATH HELPER - METHOD OVERLOADING ===")
     val math = MathHelper()
@@ -37,4 +37,29 @@ fun main() {
 
     val luasLingkaran = math.hitungLuas(7.0)
     println("Luas Lingkaran (r = 7.0)          : $luasLingkaran")
+}*/
+
+fun main() {
+    println("=== SISTEM PEMBAYARAN E-COMMERCE ===")
+
+    val ewallet = EWallet(accountName = "Budi", balance = 50000.0)
+    val creditCard = CreditCard(accountName = "Sari", limit = 100000.0)
+
+
+    val daftarPembayaran: List<PaymentMethod> = listOf(ewallet, creditCard)
+
+    println("\n--- Tahap 1: Proses Pembayaran Rp75.000 ---")
+    for (payment in daftarPembayaran) {
+        println("\n[${payment.accountName}] mencoba membayar Rp75.000")
+        payment.processPayment(75000.0)
+
+        if (payment is EWallet) {
+            println("=> Terdeteksi EWallet. Melakukan top up Rp50.000 otomatis...")
+            payment.topUp(50000.0)
+            println("=> Mencoba pembayaran ulang Rp75.000...")
+            payment.processPayment(75000.0)
+        }
+
+        println("-------------------------")
+    }
 }
