@@ -5,3 +5,8 @@ interface  Clickable {
     fun click()
 }
 
+class Button(override val nama: String) : Clickable {
+    override fun click() {
+        println("Tombol '$nama' berhasil diklik!")
+    }
+}
