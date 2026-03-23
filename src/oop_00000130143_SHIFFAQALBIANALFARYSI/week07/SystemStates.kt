@@ -1,0 +1,5 @@
+package oop_00000130143_SHIFFAQALBIANALFARYSI.week07
+
+enum class  AppState {
+    STARTING, RUNNING, STOPPED
+}
