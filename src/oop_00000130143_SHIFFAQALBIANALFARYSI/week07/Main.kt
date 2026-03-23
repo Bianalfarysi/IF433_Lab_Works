@@ -1,7 +1,7 @@
 package oop_00000130143_SHIFFAQALBIANALFARYSI.week07
 
 fun main() {
-    println("=== TEST SINGLETON ===")
+   /* println("=== TEST SINGLETON ===")
     println("Status: ${DatabaseManager.connectionStatus}")
     DatabaseManager.connect()
 
@@ -38,7 +38,10 @@ fun main() {
         ApiResponse.Loading -> "Tampilkan Spinner"
     }
 
-    println(uiMessage)
+    println(uiMessage)*/
+
+    GameManager.startGame()
+    GameManager.startGame()
 }
 
 
