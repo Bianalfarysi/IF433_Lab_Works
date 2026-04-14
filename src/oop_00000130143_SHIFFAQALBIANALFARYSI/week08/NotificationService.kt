@@ -1,17 +1,19 @@
 package oop_00000130143_SHIFFAQALBIANALFARYSI.week08
 
-import oop_00000130143_SHIFFAQALBIANALFARYSI.week07.RegularUser
 
 class NotificationService {
-    fun senEmail(emailAddress: String) {
+    fun sendEmail(emailAddress: String) {
         println("Mengirim email ke : $emailAddress")
     }
 
-    fun processUser(user: UserProfile){
-        if (user.email != null){
-          senEmail(user.email)
-        }else {
+    fun processUser(user: UserProfile) {
+        val email = user.email
+        if (email != null) {
+            sendEmail(email)
+        } else {
             println("User ${user.name} tidak memiliki email.")
         }
     }
+
+
 }
