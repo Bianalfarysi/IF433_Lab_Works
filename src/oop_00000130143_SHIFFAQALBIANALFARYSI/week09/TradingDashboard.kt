@@ -40,5 +40,16 @@ fun main() {
     println("\n--- UNIQUE TRADING PAIRS ---")
     println(uniquePairs)
 
+    val totalClosed = closedTrades.size
+    val wins        = winningTrades.size
+    val losses      = losingTrades.size
+    val winRate     = if (totalClosed > 0)
+        (wins.toDouble() / totalClosed * 100)
+    else 0.0
+    println("\n--- SUMMARY ---")
+    println("Total Closed Trades : $totalClosed")
+    println("Wins  : $wins | Losses: $losses")
+    println("Win Rate            : ${"%.1f".format(winRate)}%")
+
 
 }
