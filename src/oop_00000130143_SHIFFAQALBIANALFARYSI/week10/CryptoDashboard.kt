@@ -27,4 +27,10 @@ fun main() {
     txRepo.getAll().forEach { tx ->
         println("ID: ${tx.id} | Jumlah: ${tx.amount}")
     }
+
+    println("\n=== HASIL PENCARIAN 'BTC' ===")
+    val searchResult = coinRepo.search("BTC")
+    searchResult.forEach { coin ->
+        println("Ditemukan: ${coin.name} | Saldo: ${coin.balance}")
+    }
 }
