@@ -19,10 +19,6 @@ fun main() {
     }
     println("Hasil kalkulasi run: $result")
 
-    println("\n=== TEST WITH ===")
-    val user = User("Shiffa", 20)
-    with(user) {
-        println("User Detail -> Nama: $name, Umur: $age")
-    }
+
 
 }
