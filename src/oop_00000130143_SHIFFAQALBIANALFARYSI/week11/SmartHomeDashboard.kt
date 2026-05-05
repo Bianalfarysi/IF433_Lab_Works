@@ -44,4 +44,9 @@ fun main(){
         println(it.diagnose())
     }
 
+    println("\n[SUMMARY] Dashboard Ringkasan:")
+    with(homeDevices) {
+        println("Total perangkat terdaftar: ${this.size} perangkat")
+    }
+
 }
