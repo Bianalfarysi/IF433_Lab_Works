@@ -19,6 +19,10 @@ fun main() {
     }
     println("Hasil kalkulasi run: $result")
 
-
+    val newUser = User("Budi", 20).apply {
+        age = 21 // Mengubah umur
+    }.also {
+        println("User baru berhasil dibuat: $it")
+    }
 
 }
