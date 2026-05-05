@@ -1,5 +1,7 @@
 package oop_00000130143_SHIFFAQALBIANALFARYSI.week11
 
+import kotlin.text.category
+
 fun main(){
     println("=== SMART HOME CONFIGURATION PIPELINE ===")
     val homeDevices = mutableListOf<SmartDevice>()
@@ -34,5 +36,12 @@ fun main(){
     val petFeeder = SmartDevice("Picolo's Auto Feeder", "Pet Care", true, 10)
     homeDevices.add(petFeeder)
     println("(LOG) Auto feeder ditambahkan: ${petFeeder.name}")
+
+    println("\n[SEARCH] Mencari perangkat kamera...")
+    val searchResult = homeDevices.find { it.category == "Camera" }
+    searchResult?.let {
+        println("Perangkat ditemukan:")
+        println(it.diagnose())
+    }
 
 }
