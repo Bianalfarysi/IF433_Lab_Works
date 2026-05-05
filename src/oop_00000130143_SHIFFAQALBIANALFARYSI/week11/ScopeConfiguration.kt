@@ -17,4 +17,6 @@ fun main(){
     }.add(4)
     println("Setelah ditambah: $numbers")
 
+
+
 }
