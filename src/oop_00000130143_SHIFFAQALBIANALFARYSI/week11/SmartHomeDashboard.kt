@@ -22,4 +22,17 @@ fun main(){
         homeDevices.add(it)
     }
 
+    println("\n[SETUP] Mengonfigurasi perangkat HVAC...")
+    val acUnit = run {
+        SmartDevice("Daikin Inverter (Kabel 3x2.5)", "HVAC", false, 800)
+    }
+    homeDevices.add(acUnit)
+    println("(LOG) AC unit ditambahkan: ${acUnit.name}")
+
+    // Tambah alat pakan peliharaan
+    println("\n[SETUP] Mengonfigurasi perangkat Pet Care...")
+    val petFeeder = SmartDevice("Picolo's Auto Feeder", "Pet Care", true, 10)
+    homeDevices.add(petFeeder)
+    println("(LOG) Auto feeder ditambahkan: ${petFeeder.name}")
+
 }
