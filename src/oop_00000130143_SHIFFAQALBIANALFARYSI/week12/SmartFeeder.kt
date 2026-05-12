@@ -47,5 +47,19 @@ fun main(){
         println("Siklus pengecekan dispenser pagi selesai.")
     }
 
+    println("────────────────────────────────────────")
+    println("   JADWAL MAKAN SORE (runCatching Pipeline)")
+    println("   Stok diisi ulang ke 1000 gr")
+    println("   Meminta: 30 gr | Stok: 1000 gr")
+    println("────────────────────────────────────────")
+
+    runCatching {
+        dispenseKibble(
+            requestedGram = 30,
+            availableGram = 1000,
+            isJammed = false
+        )
+    }
+
 }
 
