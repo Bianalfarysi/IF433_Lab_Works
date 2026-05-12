@@ -19,5 +19,30 @@ fun main(){
     println("=== Smart Pet Feeder System ===")
     var currentKibbleStock = 50
     println("Stok kibble awal: $currentKibbleStock gr\n")
+
+    println("────────────────────────────────────────")
+    println("   JADWAL MAKAN PAGI (Try-Catch)")
+    println("   Meminta: 80 gr | Stok: $currentKibbleStock gr")
+    println("────────────────────────────────────────")
+
+    try {
+        val sisaStok = dispenseKibble(
+            requestedGram = 80,
+            availableGram = currentKibbleStock,
+            isJammed = false
+        )
+        currentKibbleStock = sisaStok
+
+    } catch (e: DispenserJamException) {
+        println("ERROR HARDWARE${e.message}")
+        println("Tindakan: Harap periksa dan bersihkan dispenser secara manual.")
+
+    } catch (e: FoodEmptyException) {
+        println("ERROR STOK ${e.message}")
+        println("Tindakan: Segera isi ulang wadah kibble!")
+
+    } catch (e: Exception) {
+        println(" ERROR UMUM Terjadi kesalahan tidak terduga: ${e.message}")
+    }
 }
 
