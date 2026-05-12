@@ -70,7 +70,31 @@ fun main() {
             println("   (Opsional: Berikan chicken jerky secara manual)")
         }
 
+    println("────────────────────────────────────────")
+    println("   RINGKASAN AKHIR SISTEM")
+    println("   Stok kibble tersisa: $currentKibbleStock gr")
+    println("────────────────────────────────────────")
 
+    println()
+    println("EXTRA: Uji Semua Skenario Error")
+
+    println("\nSkenario Dispenser Macet:")
+    runCatching {
+        dispenseKibble(requestedGram = 30, availableGram = 500, isJammed = true)
+    }.onSuccess {
+        println("Sukses, sisa: $it gr")
+    }.onFailure { error ->
+        println(" Peringatan ke Pemilik: ${error.message}")
+    }
+
+    println("\n Skenario Porsi Invalid (0 gr):")
+    runCatching {
+        dispenseKibble(requestedGram = 0, availableGram = 500, isJammed = false)
+    }.onSuccess {
+        println("Sukses, sisa: $it gr")
+    }.onFailure { error ->
+        println("Peringatan ke Pemilik: ${error.message}")
+    }
 
 }
 
